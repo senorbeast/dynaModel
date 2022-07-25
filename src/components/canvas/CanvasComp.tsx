@@ -1,6 +1,6 @@
 import { Environment } from '@react-three/drei'
 import { useThree } from '@react-three/fiber'
-import Shader from './Shader/Shader'
+import Wrapper from './Wrapper'
 import { PresentationControls } from '@react-three/drei'
 
 const CanvasComp = () => {
@@ -21,9 +21,9 @@ const CanvasComp = () => {
         rotation={[0, 0, 0]} // Default rotation
         polar={[0, Math.PI / 2]} // Vertical limits
         azimuth={[-Infinity, Infinity]} // Horizontal limits
-        config={{ mass: 1, tension: 170, friction: 26 }} // Spring config
+        config={{ mass: 1, tension: 170, friction: 12 }} // Spring config
       >
-        <Shader></Shader>
+        <Wrapper></Wrapper>
         <ambientLight intensity={0.9}></ambientLight>
       </PresentationControls>
     </>
